@@ -1,0 +1,173 @@
+---
+# file: roles/osx/tasks/main.yml
+
+################################################################################
+# Dock                                                                         #
+################################################################################
+
+# tilesize = 95; -int 95;
+- name: Dock | tilesize
+  command: defaults write com.apple.dock tilesize -int 95
+
+# autohide = 1; -bool true;
+- name: Dock | Automatically hide and show the Dock
+  command: defaults write com.apple.dock autohide -bool true
+
+# "dashboard-in-overlay" = 1; -bool true;
+# - name: Dock | Dashboard: As Overlay (Not As Space)
+#   command: defaults write com.apple.dock dashboard-in-overlay -bool true
+
+# launchanim = 0; -bool false;
+- name: Dock | Animate opening applications
+  command: defaults write com.apple.dock magnification -bool false
+
+# magnification = 0; -bool false;
+- name: Dock | Magnification
+  command: defaults write com.apple.dock magnification -bool false
+
+# mineffect = scale; string scale (options: genie or scale);
+- name: Dock | Minimize animation using: Genie/Scale effect
+  command: defaults write com.apple.dock mineffect scale
+
+# "minimize-to-application" = 0; -bool false;
+- name: Dock | Minimize windows into application icon
+  command: defaults write com.apple.dock minimize-to-application -bool false
+
+# "mru-spaces" = 0; -bool false;
+- name: Dock | Automatically rearrange Spaces based on most recent use
+  command: defaults write com.apple.dock mru-spaces -bool false
+
+# orientation = bottom; string bottom (options: left, bottom, right);
+- name: Dock | Position on screen
+  command: defaults write com.apple.dock orientation bottom
+
+# "show-process-indicators" = 1; -bool true
+- name: Dock | Show indicator lights for open applications in the Dock
+  command: defaults write com.apple.dock show-process-indicators -bool true
+
+# showAppExposeGestureEnabled = 1; -bool true;
+- name: Dock | Show App Exposé - Swipe down with four fingers
+  command: defaults write com.apple.dock showAppExposeGestureEnabled -bool true
+# showLaunchpadGestureEnabled = 1; -bool true;
+- name: Dock | Show Launchpad - Pinch with thumb and three fingers
+  command: defaults write com.apple.dock showLaunchpadGestureEnabled -bool true
+# showMissionControlGestureEnabled = 1; -bool true;
+- name: Dock | Show Mission Control - Swipe up with four fingers
+  command: defaults write com.apple.dock showMissionControlGestureEnabled -bool true
+
+# showhidden = 1; -bool true;
+- name: Dock | Make Dock icons of hidden applications translucent (when false?)
+  command: defaults write com.apple.dock showhidden -bool true
+
+################################################################################
+# Mission Control                                                              #
+################################################################################
+
+# "expose-group-by-app" = 1; -bool true;
+- name: Mission Cotrol | Group windows by application
+  command: defaults write com.apple.dock expose-group-by-app -bool true
+
+# TODO: Write Ansible task
+# Hot Corners
+# Possible values:
+#  0: no-op
+#  2: Mission Control
+#  3: Application Windows
+#  4: Desktop
+#  5: Start Screen Saver
+#  6: Disable Screen Saver
+#  7: Dashboard
+# 10: Put Display to Sleep
+# 11: Launchpad
+# 12: Notification Center
+# Bottom left screen corner -> Desktop
+defaults write com.apple.dock wvous-bl-corner -int 4
+defaults write com.apple.dock wvous-bl-modifier -int 0
+# Bottom right screen corner -> Application Windows
+defaults write com.apple.dock wvous-br-corner -int 3
+defaults write com.apple.dock wvous-br-modifier -int 0
+# Top left screen corner -> Mission Control
+defaults write com.apple.dock wvous-tl-corner -int 2
+defaults write com.apple.dock wvous-tl-modifier -int 0
+# Top right screen corner -> Put Display to Sleep
+defaults write com.apple.dock wvous-tr-corner -int 10
+defaults write com.apple.dock wvous-tr-modifier -int 0
+
+# - name: disable dashboard
+#   command: defaults write com.apple.dashboard enabled-state -int 1 OR defaults write com.apple.dashboard mcx-disabled -bool true
+
+################################################################################
+# Trackpad                                                                     #
+################################################################################
+
+# Clicking = 1; -bool true;
+- name: Trackpad | Tap to click
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+
+# DragLock = 0; -bool false;
+- name: Trackpad | DragLock
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad DragLock -bool false
+
+# Dragging = 1; -bool true;
+- name: Trackpad | Dragging
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool true
+
+# HIDScrollZoomModifierMask = 262144; -int 262144
+
+# TrackpadCornerSecondaryClick = 0; -int 0; Secondary click (Click or tap with two fingers)
+- name: Trackpad | TrackpadCornerSecondaryClick
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 0
+
+# TrackpadFiveFingerPinchGesture = 2; -int 2;
+# TrackpadFourFingerHorizSwipeGesture = 2; -int 2;
+# TrackpadFourFingerPinchGesture = 2; -int 2;
+# TrackpadFourFingerVertSwipeGesture = 2; -int 2;
+# TrackpadHandResting = 1; -bool true;
+# TrackpadHorizScroll = 1; -int 1;
+
+# TrackpadMomentumScroll = 1; -bool true; with or without inertia
+- name: Trackpad | TrackpadMomentumScroll
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadPinch -bool true
+
+# TrackpadPinch = 1; -bool true; Zoom in or out
+- name: Trackpad | TrackpadPinch
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadPinch -bool true
+
+# TrackpadRightClick = 1; -bool true;
+
+# TrackpadRotate = 1; -bool true; Rotate (Rotate with two fingers)
+- name: Trackpad | TrackpadRotate
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRotate -bool true
+
+# TrackpadScroll = 1; -bool true;
+
+# TrackpadThreeFingerDrag = 0; -bool false;
+- name: Trackpad | TrackpadThreeFingerDrag
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool false
+
+
+# TrackpadThreeFingerHorizSwipeGesture = 0; -int 0;
+# TrackpadThreeFingerSwipe = 1; -int 1;
+
+# TrackpadThreeFingerTapGesture = 2; -int 2; Look up (Tap with three fingers)
+- name: Trackpad | TrackpadThreeFingerTapGesture
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerTapGesture -int 2
+
+
+# TrackpadThreeFingerVertSwipeGesture = 0; -int 0;
+
+# TrackpadTwoFingerDoubleTapGesture = 1; -int 1; Smart zoom (Double-tap with two fingers)
+- name: Trackpad | TrackpadTwoFingerDoubleTapGesture
+  command: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadTwoFingerDoubleTapGesture -int 1
+
+# TrackpadTwoFingerFromRightEdgeSwipeGesture = 3; -int 3;
+# USBMouseStopsTrackpad = 0; -int 0;
+# UserPreferences = 1; -bool true;
+# migrationDone = 1; -bool true;
+# version = 5; -int 5;
+
+################################################################################
+# Keyboard                                                                     #
+################################################################################
+
+

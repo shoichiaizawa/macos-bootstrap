@@ -1,0 +1,36 @@
+---
+- name: Create dotfiles symlinks
+  file: src=~/Dropbox/code/dotfiles/{{ item.dir }}{{ item.name }} dest=~/.{{ item.name }} state=link
+  with_items:
+    # Vim
+    - { dir: '', name: 'vim' }
+    - { dir: 'vim/', name: 'vimrc' }
+
+    # Bash
+    - { dir: '', name: 'bash' }
+    - { dir: 'bash/', name: 'bashrc' }
+    - { dir: 'bash/', name: 'bash_profile' }
+
+    # Git
+    - { dir: 'git/', name: 'gitconfig' }
+    - { dir: 'git/', name: 'gitignore_global' }
+
+    # Emacs
+    - { dir: '', name: 'emacs.d' }
+
+    # Mutt
+    - { dir: '', name: 'mutt' }
+    - { dir: 'mutt/', name: 'muttrc' }
+
+    # Newsbeuter
+    - { dir: '', name: 'newsbeuter' }
+
+    # Atom
+    - { dir: '', name: 'atom' }
+
+    # Misc
+    - { dir: '', name: 'inputrc' }
+    - { dir: '', name: 'octaverc' }
+    - { dir: '', name: 'pythonrc.py' }
+  tags:
+    - dotfiles

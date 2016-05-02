@@ -1,0 +1,148 @@
+---
+# file: roles/homebrew/vars/main.yml
+
+# Tap external homebrew repositories.
+#
+# e.g.
+# - homebrew/binary
+homebrew_taps:
+  - caskroom/cask
+  - caskroom/versions
+  - homebrew/binary
+  - homebrew/completions
+  - homebrew/dupes
+  - homebrew/php
+  - homebrew/science
+  - homebrew/versions
+  # - homebrew/apache           # Tap as needed (or not)
+  # - homebrew/python           # Tap as needed (or not)
+  - vitorgalvao/tiny-scripts
+
+# Manage homebrew packages.
+#
+# e.g.
+# - package_name
+# or
+# { name: package_name, state: package_state, install_options: [with-baz, enable-debag] }
+#
+# state choices: [head, latest, present, absent, linked, unlinked] (default: latest)
+# install_options: string or sequence (default: none)
+homebrew_packages:
+  # All the packages commented out below are potentially to be installed later
+  # on. They are collected through surfing the web and seem compelling to me;
+  # thus, I listed them up in this playbook file. I commented them out because
+  # I do not know what they are and/or how they behave exactly.
+  - { name: asciinema }
+  - { name: ack }
+  # - { name: android-sdk }     # Cordova requires API 22 (as of Nov 2015)
+  - { name: ansible }
+  # - { name: autojump }        # Like a predecessor of z and fasd
+  # - { name: awscli }          # brew info to check what the caveats are
+  - { name: bash }            # Do chsh -s /usr/local/bin/bash
+  - { name: bash-completion }
+  # - { name: boot2docker }
+  # - { name: brew-cask }       # Tap caskroom/cask to install:
+                              # NOTE:
+                              # As of the release of v0.60.0, it is no longer
+                              # necessary to `brew install brew-cask`.
+                              # `brew tap caskroom/cask` will install
+                              # `brew-cask` as a Homebrew external command, and
+                              # `brew update` will keep it up-to-date.
+  - { name: brew-cask-completion } # Tap homebrew/completions to install
+  # - { name: coreutils }
+  # - { name: moreutils }
+  # - { name: binutils }
+  # - { name: diffutils }
+  # - { name: findutils }
+  - { name: cask-repair }     # Tap vitorgalvao/tiny-scripts to install
+  - { name: colordiff }
+  - { name: composer }        # Tap homebrew/php to install
+  - { name: cowsay }
+  - { name: ctags }           # I don't know what this is exactly
+  # - { name: curl }            # TODO: Better if you install this over the default one?
+  # - { name: dark-mode }
+  # - { name: dnsmasq }
+  - { name: docker }
+  - { name: docker-compose }
+  - { name: docker-machine }
+  - { name: emacs, install_options: with-cocoa,srgb }
+  # - { name: fasd }            # Like a successor of autojump and z
+  - { name: ffmpeg }
+  - { name: figlet }          # Similar to toilet
+  - { name: fortune }
+  # - { name: gcc }           # Takes much time to build
+  - { name: gem-completion }  # Tap homebrew/completions to install
+  # - { name: gettext }
+  # - { name: gifsicle }
+  - { name: git }
+  # - { name: gnupg }           # gpg
+  # - { name: gnupg2 }          # gpg2
+  # - { name: gnuplot,
+  #     install_options: with-x11 } # Version 5; it has some bug when outputting graph
+  # - { name: gnuplot4,
+  #     install_options: with-x11 } # Tap homebrew/versions to install;
+                                    # this is needed if saving an Octave plot
+                                    # as a user-specified external image file.
+                                    # The latest version 5.0.2 (Jan 2016)
+                                    # has some bugs and does not output
+                                    # the plot properly.
+  # - { name: gnu-indent }      # --with-default-names
+  # - { name: gnu-sed }         # --with-default-names
+  # - { name: gnu-tar }         # --with-default-names
+  # - { name: gnu-which }       # --with-default-names
+  # - { name: grep }            # --with-default-names
+  - { name: go }
+  - { name: heroku-toolbelt }
+  - { name: hub }
+  - { name: imagemagick }
+  # - { name: jq }
+  - { name: less }            # Tap homebrew/dupes to install
+  - { name: lua }
+  # - { name: macvim, install_options: with-override-system-vim }
+  # - { name: mariadb }       # Drop-in replacement for MySQL; TODO: see more info
+  - { name: markdown }
+  - { name: mercurial }
+  - { name: mongodb }
+  - { name: mutt }
+  - { name: mysql }
+  - { name: nano }            # Tap homebrew/dupes to install
+  - { name: newsbeuter }
+  # - { name: node }            # Use nvm to install
+  # - { name: nvm }             # Not officially supported; see how to install at https://github.com/creationix/nvm
+  # - { name: octave }          # Tap homebrew/science to install, specify options if needed
+  # - { name: openssl }         # Specify some options if needed
+  # - { name: packer }
+  # - { name: php56 }           # Tap homebrew/php to install
+  - { name: pstree }
+  - { name: pyenv }
+  - { name: pyenv-virtualenv }
+  # - { name: python }          # Use pyenv to install
+  # - { name: python3 }         # Use pyenv to install
+  - { name: rbenv }
+  - { name: rbenv-default-gems }
+  # - { name: rbenv-gem-rehash } # DEPRECATED
+  - { name: readline }
+  - { name: reattach-to-user-namespace }
+  # - { name: redis }
+  # - { name: rsync }
+  - { name: ruby-build }
+  - { name: ruby-completion } # Tap homebrew/completions to install
+  # - { name: s3cmd }
+  - { name: sqlite }
+  # - { name: the_platinum_searcher }
+  - { name: the_silver_searcher }
+  - { name: tidy-html5 }
+  # - { name: tig }
+  - { name: tmux }
+  - { name: tmuxinator-completion } # Tap homebrew/completions to install
+  - { name: toilet }          # Similar to figlet
+  - { name: tree }
+  - { name: unzip } # Tap homebrew/dupes to install
+  - { name: vagrant-completion }  # Tap homebrew/versions to install
+  - { name: vim, install_options: override-system-vi }   # Specify some options if needed i.e. what --override-system-vi, --with-lua exactly do?
+  - { name: watch }
+  # - { name: wget }            # TODO: Understand why some people install this
+  - { name: youtube-dl }
+  - { name: z }               # Like a successor of autojump, predecessor of fasd
+  - { name: zsh }
+  - { name: zsh-completions }

@@ -1,0 +1,25 @@
+---
+# file: roles/homebrew/tasks/main.yml
+
+- name: Update Homebrew itself and Upgrade all Homebrew packages
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+
+- name: Tap external Homebrew repositories
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_taps }}"
+  when: "{{ homebrew_taps }}"
+
+- name: Install Homebrew packages
+  homebrew:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('latest') }}"
+    install_options: "{{ item.install_options | default() }}"
+  with_items: "{{ homebrew_packages }}"
+  when: "{{ homebrew_packages }}"
+
+- name: Cleanup Homebrew packages
+  command: brew cleanup

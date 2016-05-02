@@ -1,0 +1,126 @@
+---
+# file: roles/homebrew-cask/vars/main.yml
+
+#
+# e.g.
+# - package_name
+# or
+# { name: package_name, state: package_state }
+#
+# state choices: [present, absent, installed, uninstalled] (default: present)
+homebrew_cask_packages:
+  # - 1password
+  # See this for licence migration (MAS -> AWS):
+  # https://support.1password.com/switch-from-mac-app-store/
+  # https://discussions.agilebits.com/discussion/38591/installing-chrome-and-1p-via-homebrew-cask
+  # https://discussions.agilebits.com/discussion/56638/cant-switch-the-version-of-1password-6-from-mac-app-store-to-the-agilebits-store
+  - alfred
+  # - amazon-cloud-drive
+  # - android-studio
+  # - anki
+  - appcleaner
+  - arduino
+  - atom
+  - bettertouchtool
+  - brackets
+  # - caffeine              # Use Amphetamine instead?
+  # - cloud                 # Use Beem instead?
+  # - colloquy              # Make sure it is usable i.e. do the settings
+  - dash
+  # - dayone-cli
+  - dropbox
+  # - droplr
+  # - dropzone
+  # - duet
+  - evernote
+  # - fantastical           # What to do for licence paid
+  # - filezilla
+  - flux
+  # - geektool
+  # - gitbook
+  - github-desktop
+  # - githubpulse
+  - gitter
+  - gitup
+  - google-chrome
+  - google-drive
+  - google-japanese-ime
+  # - hocus-focus
+  # - hunt-x
+  - ionic-lab
+  # - iterm2
+  - iterm2-beta           # Tap caskroom/versions
+  # - iterm2-nightly        # Tap caskroom/versions
+  # - istat-menus           # Licensed
+  - jadengeller-helium
+  - java                  # Install Java; tap caskroom/versions if multiple versions needed
+  # - jewelrybox
+  - karabiner
+  - keycastr              # brew-cask not working; installed via GitHub repo
+  - kindle
+  - kitematic             # Docker GUI
+  # - kobito
+  # - kod
+  - libreoffice
+  # - lighttable
+  # - limechat              # Make sure it is usable i.e. do the settings
+  # - loading
+  - macdown
+  # - mactex                # TODO: This said to be a dependency for octave
+  - mactracker
+  # - mailbox
+  # - marked                # What to do for licence paid
+  # - microsoft-office      # Install or not
+  # - mindnode-pro          # What to do for licence paid
+  - mojibar
+  # - moom                  # See licence migration (MAS -> Direct): https://manytricks.com/blog/?page_id=2208
+  # - mou
+  # - noizio
+  - obs
+  # - openemu
+  - p5                    # p5.js editor; still in beta
+  # - packer
+  - pixate-studio
+  - polymail
+  - prefs-editor          # A free third party plist editor looks compelling
+  - processing
+  # - recordit
+  # - revisions
+  # - robomongo             # Some describe this is the MongoDB equivalent of Sequel Pro
+  # - send-to-kindle
+  # - sequel-pro            # GUI tool for MySQL
+  # - shuttle
+  # - sixtyforce            # Licence key
+  - skitch
+  - skype
+  - slack
+  - soundflower
+  - sourcetree
+  # - spectacle
+  # - spotify
+  # - sublime-text
+  - sublime-text3         # Tap caskroom/versions to install
+  - the-unarchiver
+  - vagrant
+  # - vagrant-manager
+  # - vectr
+  - virtualbox
+  - vlc
+  # - vuze
+  # - wineskin-winery
+  # - xampp
+  # - xmarks-safari
+  - xquartz
+
+  ### QuickLook plugins ###
+  ### https://github.com/sindresorhus/quick-look-plugins
+  - qlcolorcode
+  - qlstephen
+  - qlmarkdown
+  - quicklook-json
+  - qlprettypatch
+  - quicklook-csv
+  - betterzipql
+  - qlimagesize
+  - webpquicklook
+  - suspicious-package

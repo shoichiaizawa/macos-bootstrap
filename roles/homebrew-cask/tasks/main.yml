@@ -1,0 +1,12 @@
+---
+# file: roles/homebrew-cask/tasks/main.yml
+
+- name: Install applications via Homebrew Cask
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_cask_packages }}"
+  when: "{{ homebrew_cask_packages }}"
+
+- name: Cleanup Homebrew Cask packages
+  command: brew cask cleanup

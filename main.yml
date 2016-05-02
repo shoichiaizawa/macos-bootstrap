@@ -1,0 +1,15 @@
+---
+# file: main.yml
+
+- hosts: 127.0.0.1
+  connection: local
+  gather_facts: no
+  become: no
+  # become_method: sudo
+  environment:
+    HOMEBREW_CASK_OPTS: "--appdir=/Applications"
+  roles:
+    # - homebrew
+    # - homebrew-cask
+    # - osx
+    - symlink-dotfiles
