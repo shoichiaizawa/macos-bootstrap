@@ -44,7 +44,6 @@ homebrew_packages:
                               # Do the following things:
                               # 1. Add `/usr/local/bin/bash` to `/etc/shells`
                               # 2. Do `chsh -s /usr/local/bin/bash`
-  - { name: bash-completion2 }  # Tap homebrew/versions to install
   # - { name: boot2docker }
   # - { name: brew-cask }       # Tap caskroom/cask to install:
                               # NOTE:
@@ -53,13 +52,6 @@ homebrew_packages:
                               # `brew tap caskroom/cask` will install
                               # `brew-cask` as a Homebrew external command, and
                               # `brew update` will keep it up-to-date.
-  - { name: brew-cask-completion } # Tap homebrew/completions to install
-  - { name: bundler-completion }   # Tap homebrew/completions to install
-  # - { name: coreutils }
-  # - { name: moreutils }
-  # - { name: binutils }
-  # - { name: diffutils }
-  # - { name: findutils }
   - { name: cask-repair }     # Tap vitorgalvao/tiny-scripts to install
   - { name: colordiff }
   - { name: composer }        # Tap homebrew/php to install
@@ -78,31 +70,12 @@ homebrew_packages:
   - { name: figlet }          # Similar to toilet
   - { name: fortune }
   # - { name: gcc }           # Takes much time to build
-  - { name: gem-completion }  # Tap homebrew/completions to install
   # - { name: gettext }
   # - { name: gifsicle }
   - { name: git }
   - { name: git-cal }
     # - { name: git-lfs }         # TODO: How is this helpful?
-  # - { name: gnupg }           # gpg
-  # - { name: gnupg2 }          # gpg2
-  # - { name: gnuplot,
-  #     install_options: with-x11 } # Version 5; it has some bug when outputting graph
-  # - { name: gnuplot4,
-  #     install_options: with-x11 } # Tap homebrew/versions to install;
-                                    # NOTE:
-                                    # This is needed if saving an Octave plot
-                                    # as a user-specified external image file.
-                                    # The latest version 5.0.2 (Jan 2016)
-                                    # has some bugs and does not output
-                                    # the plot properly.
-  # - { name: gnu-indent }      # --with-default-names
-  # - { name: gnu-sed }         # --with-default-names
-  # - { name: gnu-tar }         # --with-default-names
-  # - { name: gnu-which }       # --with-default-names
-  # - { name: grep }            # --with-default-names
   - { name: go }
-  - { name: grunt-completion }  # Tap homebrew/completions to install
   - { name: heroku-toolbelt }
   - { name: htop }
   - { name: hub }
@@ -127,7 +100,6 @@ homebrew_packages:
   # - { name: octave }          # Tap homebrew/science to install, specify options if needed
   # - { name: openssl }         # Specify some options if needed
   # - { name: packer }
-  - { name: pip-completion }    # Tap homebrew/completions to install
   # - { name: php56 }           # Tap homebrew/php to install
   - { name: pstree }
   - { name: pv }
@@ -135,8 +107,6 @@ homebrew_packages:
   - { name: pyenv-virtualenv }
   # - { name: python }          # Use pyenv to install
   # - { name: python3 }         # Use pyenv to install
-  - { name: rails-completion } # Tap homebrew/completions to install
-  - { name: rake-completion }  # Tap homebrew/completions to install
   - { name: rbenv }
   - { name: rbenv-default-gems }
   # - { name: rbenv-gem-rehash } # DEPRECATED
@@ -145,7 +115,6 @@ homebrew_packages:
   # - { name: redis }
   # - { name: rsync }
   - { name: ruby-build }
-  - { name: ruby-completion } # Tap homebrew/completions to install
   # - { name: s3cmd }
   - { name: source-highlight }
   - { name: speedtest_cli }   # NOTE: pip installation is seemingly default
@@ -156,11 +125,9 @@ homebrew_packages:
   - { name: tidy-html5 }
   # - { name: tig }
   - { name: tmux }
-  - { name: tmuxinator-completion } # Tap homebrew/completions to install
   - { name: toilet }          # Similar to figlet
   - { name: tree }
   - { name: unzip } # Tap homebrew/dupes to install
-  - { name: vagrant-completion }  # Tap homebrew/versions to install
   - { name: vim, install_options: override-system-vi }   # Specify some options if needed i.e. what --override-system-vi, --with-lua exactly do?
   - { name: watch }
   - { name: wget }            # TODO: Understand why some people install this
@@ -170,3 +137,52 @@ homebrew_packages:
   - { name: z }               # Like a successor of autojump, predecessor of fasd
   - { name: zsh }
   - { name: zsh-completions }
+
+  ##############################################################################
+  # Bash completions; `brew tap <username/repo>` as necessary (only for the
+  # first time per new tap)
+  ##############################################################################
+
+  - { name: bash-completion2 }       # Tap homebrew/versions to install
+  - { name: brew-cask-completion }   # Tap homebrew/completions to install
+  - { name: bundler-completion }     # Tap homebrew/completions to install
+  - { name: gem-completion }         # Tap homebrew/completions to install
+  - { name: grunt-completion }       # Tap homebrew/completions to install
+  - { name: pip-completion }         # Tap homebrew/completions to install
+  - { name: rails-completion }       # Tap homebrew/completions to install
+  - { name: rake-completion }        # Tap homebrew/completions to install
+  - { name: ruby-completion }        # Tap homebrew/completions to install
+  - { name: tmuxinator-completion }  # Tap homebrew/completions to install
+  - { name: vagrant-completion }     # Tap homebrew/completions to install
+
+  ##############################################################################
+  # GNU command line tools
+  ##############################################################################
+
+  # - { name: gnupg }           # gpg
+  # - { name: gnupg2 }          # gpg2
+  # - { name: gnuplot,
+  #     install_options: with-x11 } # Version 5; it has some bug when outputting graph
+  # - { name: gnuplot4,
+  #     install_options: with-x11 } # Tap homebrew/versions to install;
+                                    # NOTE:
+                                    # This is needed if saving an Octave plot
+                                    # as a user-specified external image file.
+                                    # The latest version 5.0.2 (Jan 2016)
+                                    # has some bugs and does not output
+                                    # the plot properly.
+  # - { name: gnu-indent }      # --with-default-names
+  # - { name: gnu-sed }         # --with-default-names
+  # - { name: gnu-tar }         # --with-default-names
+  # - { name: gnu-which }       # --with-default-names
+  # - { name: grep }            # --with-default-names
+
+  ##############################################################################
+  # Utility tools
+  ##############################################################################
+
+  # - { name: coreutils }
+  # - { name: moreutils }
+  # - { name: binutils }
+  # - { name: diffutils }
+  # - { name: findutils }
