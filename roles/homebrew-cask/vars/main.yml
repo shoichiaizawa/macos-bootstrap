@@ -35,6 +35,7 @@ homebrew_cask_packages:
   - evernote
   # - fantastical           # What to do for licence paid
   # - filezilla
+  - firefox
   - flux
   # - geektool
   # - gitbook
@@ -44,9 +45,11 @@ homebrew_cask_packages:
   - gitup
   - google-chrome
   - google-drive
+  # - google-hangouts
   - google-japanese-ime
   # - hocus-focus
   # - hunt-x
+  - imageoptim
   - ionic-lab
   # - iterm2
   - iterm2-beta           # Tap caskroom/versions
@@ -59,7 +62,7 @@ homebrew_cask_packages:
   - keycastr              # brew-cask not working; installed via GitHub repo
   - kindle
   - kitematic             # Docker GUI
-  # - kobito
+  # - kobito                # Removed from the cask list
   # - kod
   - libreoffice
   # - lighttable
@@ -98,8 +101,8 @@ homebrew_cask_packages:
   - sourcetree
   # - spectacle
   # - spotify
-  # - sublime-text
-  - sublime-text3         # Tap caskroom/versions to install
+  - sublime-text          # Now version 3 can be installed
+  # - sublime-text-dev      # 3 is now a standard cask; tap caskroom/versions to install
   - the-unarchiver
   - vagrant
   # - vagrant-manager
@@ -107,6 +110,7 @@ homebrew_cask_packages:
   - virtualbox
   - vlc
   # - vuze
+  # - wi2-connect         # Removed from the cask list
   # - wineskin-winery
   # - xampp
   # - xmarks-safari
