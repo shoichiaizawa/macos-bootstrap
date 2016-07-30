@@ -14,6 +14,7 @@ homebrew_taps:
   - homebrew/php
   - homebrew/science
   - homebrew/versions
+  # - caskroom/fonts            # Tap as needed (or not)
   # - homebrew/apache           # Tap as needed (or not)
   # - homebrew/python           # Tap as needed (or not)
   - vitorgalvao/tiny-scripts
@@ -38,8 +39,12 @@ homebrew_packages:
   - { name: ansible }
   # - { name: autojump }        # Like a predecessor of z and fasd
   # - { name: awscli }          # brew info to check what the caveats are
-  - { name: bash }            # Do chsh -s /usr/local/bin/bash
-  - { name: bash-completion }
+  - { name: bash }            # Install Bash 4;
+                              # NOTE:
+                              # Do the following things:
+                              # 1. Add `/usr/local/bin/bash` to `/etc/shells`
+                              # 2. Do `chsh -s /usr/local/bin/bash`
+  - { name: bash-completion2 }  # Tap homebrew/versions to install
   # - { name: boot2docker }
   # - { name: brew-cask }       # Tap caskroom/cask to install:
                               # NOTE:
@@ -49,6 +54,7 @@ homebrew_packages:
                               # `brew-cask` as a Homebrew external command, and
                               # `brew update` will keep it up-to-date.
   - { name: brew-cask-completion } # Tap homebrew/completions to install
+  - { name: bundler-completion }   # Tap homebrew/completions to install
   # - { name: coreutils }
   # - { name: moreutils }
   # - { name: binutils }
@@ -68,6 +74,7 @@ homebrew_packages:
   - { name: emacs, install_options: with-cocoa,srgb }
   # - { name: fasd }            # Like a successor of autojump and z
   - { name: ffmpeg }
+  - { name: fish }
   - { name: figlet }          # Similar to toilet
   - { name: fortune }
   # - { name: gcc }           # Takes much time to build
@@ -75,13 +82,16 @@ homebrew_packages:
   # - { name: gettext }
   # - { name: gifsicle }
   - { name: git }
+  - { name: git-cal }
+    # - { name: git-lfs }         # TODO: How is this helpful?
   # - { name: gnupg }           # gpg
   # - { name: gnupg2 }          # gpg2
   # - { name: gnuplot,
   #     install_options: with-x11 } # Version 5; it has some bug when outputting graph
   # - { name: gnuplot4,
   #     install_options: with-x11 } # Tap homebrew/versions to install;
-                                    # this is needed if saving an Octave plot
+                                    # NOTE:
+                                    # This is needed if saving an Octave plot
                                     # as a user-specified external image file.
                                     # The latest version 5.0.2 (Jan 2016)
                                     # has some bugs and does not output
@@ -92,7 +102,9 @@ homebrew_packages:
   # - { name: gnu-which }       # --with-default-names
   # - { name: grep }            # --with-default-names
   - { name: go }
+  - { name: grunt-completion }  # Tap homebrew/completions to install
   - { name: heroku-toolbelt }
+  - { name: htop }
   - { name: hub }
   - { name: imagemagick }
   # - { name: jq }
@@ -101,9 +113,12 @@ homebrew_packages:
   # - { name: macvim, install_options: with-override-system-vim }
   # - { name: mariadb }       # Drop-in replacement for MySQL; TODO: see more info
   - { name: markdown }
+  - { name: mas }             # Mac App Store command line interface
+  # - { name: memcached }
   - { name: mercurial }
   - { name: mongodb }
   - { name: mutt }
+  # - { name: mycli }
   - { name: mysql }
   - { name: nano }            # Tap homebrew/dupes to install
   - { name: newsbeuter }
@@ -112,12 +127,16 @@ homebrew_packages:
   # - { name: octave }          # Tap homebrew/science to install, specify options if needed
   # - { name: openssl }         # Specify some options if needed
   # - { name: packer }
+  - { name: pip-completion }    # Tap homebrew/completions to install
   # - { name: php56 }           # Tap homebrew/php to install
   - { name: pstree }
+  - { name: pv }
   - { name: pyenv }
   - { name: pyenv-virtualenv }
   # - { name: python }          # Use pyenv to install
   # - { name: python3 }         # Use pyenv to install
+  - { name: rails-completion } # Tap homebrew/completions to install
+  - { name: rake-completion }  # Tap homebrew/completions to install
   - { name: rbenv }
   - { name: rbenv-default-gems }
   # - { name: rbenv-gem-rehash } # DEPRECATED
@@ -128,7 +147,10 @@ homebrew_packages:
   - { name: ruby-build }
   - { name: ruby-completion } # Tap homebrew/completions to install
   # - { name: s3cmd }
+  - { name: source-highlight }
+  - { name: speedtest_cli }   # NOTE: pip installation is seemingly default
   - { name: sqlite }
+    # - { name: stormssh }      # TODO: See how this can be helpful
   # - { name: the_platinum_searcher }
   - { name: the_silver_searcher }
   - { name: tidy-html5 }
@@ -141,7 +163,9 @@ homebrew_packages:
   - { name: vagrant-completion }  # Tap homebrew/versions to install
   - { name: vim, install_options: override-system-vi }   # Specify some options if needed i.e. what --override-system-vi, --with-lua exactly do?
   - { name: watch }
-  # - { name: wget }            # TODO: Understand why some people install this
+  - { name: wget }            # TODO: Understand why some people install this
+  - { name: wifi-password }
+  - { name: wp-cli }          # Tap homebrew/php to install
   - { name: youtube-dl }
   - { name: z }               # Like a successor of autojump, predecessor of fasd
   - { name: zsh }
