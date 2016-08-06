@@ -69,7 +69,7 @@ homebrew_packages:
   - { name: fish }
   - { name: figlet }          # Similar to toilet
   - { name: fortune }
-  # - { name: gcc }           # Takes much time to build
+  - { name: gcc }
   # - { name: gettext }
   # - { name: gifsicle }
   - { name: git }
