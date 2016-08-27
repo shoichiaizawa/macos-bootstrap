@@ -143,6 +143,7 @@ homebrew_packages:
   # first time per new tap)
   ##############################################################################
 
+  - { name: apm-bash-completion }    # Tap homebrew/completions to install
   - { name: bash-completion2 }       # Tap homebrew/versions to install
   - { name: brew-cask-completion }   # Tap homebrew/completions to install
   - { name: bundler-completion }     # Tap homebrew/completions to install
