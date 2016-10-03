@@ -72,6 +72,7 @@ homebrew_cask_packages:
   # - mactex                # TODO: This said to be a dependency for octave
   - mactracker
   # - mailbox
+  - mamp
   # - marked                # What to do for licence paid
   # - microsoft-office      # Install or not
   # - mindnode-pro          # What to do for licence paid
