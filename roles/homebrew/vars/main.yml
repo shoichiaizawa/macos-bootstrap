@@ -95,6 +95,7 @@ homebrew_packages:
   - { name: mysql }
   - { name: nano }            # Tap homebrew/dupes to install
   - { name: newsbeuter }
+  - { name: nginx }
   # - { name: node }            # Use nvm to install
   # - { name: nvm }             # Not officially supported; see how to install at https://github.com/creationix/nvm
   # - { name: octave }          # Tap homebrew/science to install, specify options if needed
