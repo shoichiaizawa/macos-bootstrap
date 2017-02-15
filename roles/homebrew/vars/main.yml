@@ -38,6 +38,7 @@ homebrew_packages:
   - { name: ack }
   # - { name: android-sdk }     # Cordova requires API 22 (as of Nov 2015)
   - { name: ansible }
+  - { name: archey }
   # - { name: autojump }        # Like a predecessor of z and fasd
   # - { name: awscli }          # brew info to check what the caveats are
   - { name: bash }            # Install Bash 4;
