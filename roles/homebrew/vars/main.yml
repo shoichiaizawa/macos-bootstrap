@@ -144,22 +144,21 @@ homebrew_packages:
   - { name: zsh-completions }
 
   ##############################################################################
-  # Bash completions; `brew tap <username/repo>` as necessary (only for the
-  # first time per new tap)
+  # Bash completions
   ##############################################################################
 
-  - { name: apm-bash-completion }    # Tap homebrew/completions to install
-  - { name: bash-completion2 }       # Tap homebrew/versions to install
-  - { name: brew-cask-completion }   # Tap homebrew/completions to install
-  - { name: bundler-completion }     # Tap homebrew/completions to install
-  - { name: gem-completion }         # Tap homebrew/completions to install
-  - { name: grunt-completion }       # Tap homebrew/completions to install
-  - { name: pip-completion }         # Tap homebrew/completions to install
-  - { name: rails-completion }       # Tap homebrew/completions to install
-  - { name: rake-completion }        # Tap homebrew/completions to install
-  - { name: ruby-completion }        # Tap homebrew/completions to install
-  - { name: tmuxinator-completion }  # Tap homebrew/completions to install
-  - { name: vagrant-completion }     # Tap homebrew/completions to install
+  - { name: apm-bash-completion }
+  - { name: bash-completion2 }
+  - { name: brew-cask-completion }
+  - { name: bundler-completion }
+  - { name: gem-completion }
+  - { name: grunt-completion }
+  - { name: pip-completion }
+  - { name: rails-completion }
+  - { name: rake-completion }
+  - { name: ruby-completion }
+  - { name: tmuxinator-completion }
+  - { name: vagrant-completion }
 
   ##############################################################################
   # GNU command line tools
