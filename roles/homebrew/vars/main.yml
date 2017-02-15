@@ -95,7 +95,7 @@ homebrew_packages:
   - { name: mongodb }
   - { name: mutt }
   # - { name: mycli }
-  - { name: mysql }
+  # - { name: mysql }
   - { name: nano }            # Tap homebrew/dupes to install
   - { name: newsbeuter }
   - { name: nginx }
