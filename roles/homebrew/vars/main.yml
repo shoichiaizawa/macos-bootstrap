@@ -87,7 +87,7 @@ homebrew_packages:
   - { name: less }            # Tap homebrew/dupes to install
   - { name: lua }
   # - { name: macvim, install_options: with-override-system-vim }
-  # - { name: mariadb }       # Drop-in replacement for MySQL; TODO: see more info
+  - { name: mariadb }       # Drop-in replacement for MySQL
   - { name: markdown }
   - { name: mas }             # Mac App Store command line interface
   # - { name: memcached }
