@@ -14,6 +14,7 @@ homebrew_taps:
   - homebrew/completions
   - homebrew/dupes
   - homebrew/php
+  - homebrew/services
   - homebrew/science
   - homebrew/versions
   - vitorgalvao/tiny-scripts
