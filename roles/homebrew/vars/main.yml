@@ -80,6 +80,7 @@ homebrew_packages:
   - { name: go }
   - { name: heroku-toolbelt }
   - { name: htop }
+  - { name: httpd24, install_options: --with-privileged-ports, --with-http2 } # Tap homebrew/apache
   - { name: hub }
   - { name: imagemagick }
   # - { name: jq }
