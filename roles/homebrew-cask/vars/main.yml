@@ -117,8 +117,11 @@ homebrew_cask_packages:
   # - xmarks-safari
   - xquartz
 
-  ### QuickLook plugins ###
-  ### https://github.com/sindresorhus/quick-look-plugins
+  ##############################################################################
+  # QuickLook plugins
+  # https://github.com/sindresorhus/quick-look-plugins
+  ##############################################################################
+
   - qlcolorcode
   - qlstephen
   - qlmarkdown
@@ -129,3 +132,8 @@ homebrew_cask_packages:
   - qlimagesize
   - webpquicklook
   - suspicious-package
+  - quicklookase
+  - qlvideo
+  - provisionql
+  - quicklookapk
+  - quicklook-pat
