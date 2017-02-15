@@ -11,7 +11,7 @@ homebrew_taps:
   - caskroom/versions
   - homebrew/apache
   - homebrew/binary
-  - homebrew/completions
+  - homebrew/core
   - homebrew/dupes
   - homebrew/php
   - homebrew/services
