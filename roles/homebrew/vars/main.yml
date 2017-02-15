@@ -7,17 +7,17 @@
 # - homebrew/binary
 homebrew_taps:
   - caskroom/cask
+  - caskroom/fonts
   - caskroom/versions
+  - homebrew/apache
   - homebrew/binary
   - homebrew/completions
   - homebrew/dupes
   - homebrew/php
   - homebrew/science
   - homebrew/versions
-  # - caskroom/fonts            # Tap as needed (or not)
-  # - homebrew/apache           # Tap as needed (or not)
-  # - homebrew/python           # Tap as needed (or not)
   - vitorgalvao/tiny-scripts
+  # - homebrew/python           # Tap as needed (or not)
 
 # Manage homebrew packages.
 #
