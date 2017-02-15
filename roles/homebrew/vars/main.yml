@@ -105,7 +105,8 @@ homebrew_packages:
   # - { name: octave }          # Tap homebrew/science to install, specify options if needed
   # - { name: openssl }         # Specify some options if needed
   # - { name: packer }
-  # - { name: php56 }           # Tap homebrew/php to install
+  # - { name: php56, install_options: --with-apache } # Tap homebrew/php to install
+  # - { name: php70, install_options: --with-apache } # Tap homebrew/php to install
   - { name: pstree }
   - { name: pv }
   - { name: pyenv }
