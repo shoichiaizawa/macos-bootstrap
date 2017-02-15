@@ -92,7 +92,7 @@ homebrew_cask_packages:
   # - revisions
   # - robomongo             # Some describe this is the MongoDB equivalent of Sequel Pro
   # - send-to-kindle
-  # - sequel-pro            # GUI tool for MySQL
+  - sequel-pro            # GUI tool for MySQL
   # - shuttle
   # - sixtyforce            # Licence key
   - skitch
