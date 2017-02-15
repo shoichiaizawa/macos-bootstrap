@@ -119,6 +119,7 @@ homebrew_packages:
   # - { name: rsync }
   - { name: ruby-build }
   # - { name: s3cmd }
+  - { name: screenfetch }
   - { name: source-highlight }
   - { name: speedtest_cli }   # NOTE: pip installation is seemingly default
   - { name: sqlite }
