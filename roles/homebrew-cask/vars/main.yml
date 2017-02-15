@@ -137,3 +137,11 @@ homebrew_cask_packages:
   - provisionql
   - quicklookapk
   - quicklook-pat
+
+  ##############################################################################
+  # homebrew-fonts
+  ##############################################################################
+
+  - font-droidsansmono-nerd-font
+  - font-fantasque-sans-mono
+  - font-fantasquesansmono-nerd-font
