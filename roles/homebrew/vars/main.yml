@@ -150,7 +150,7 @@ homebrew_packages:
   ##############################################################################
 
   - { name: apm-bash-completion }
-  - { name: bash-completion2 }
+  - { name: bash-completion@2 }
   - { name: brew-cask-completion }
   - { name: bundler-completion }
   - { name: gem-completion }
