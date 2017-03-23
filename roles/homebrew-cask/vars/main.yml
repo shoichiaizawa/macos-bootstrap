@@ -82,7 +82,6 @@ homebrew_cask_packages:
   # - noizio
   - obs
   # - openemu
-  - p5                    # p5.js editor; still in beta
   # - packer
   - pixate-studio
   - polymail
