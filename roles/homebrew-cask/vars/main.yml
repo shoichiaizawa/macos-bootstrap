@@ -86,7 +86,7 @@ homebrew_cask_packages:
   - pixate-studio
   - polymail
   - prefs-editor          # A free third party plist editor looks compelling
-  - processing
+  # - processing
   # - recordit
   # - revisions
   # - robomongo             # Some describe this is the MongoDB equivalent of Sequel Pro
