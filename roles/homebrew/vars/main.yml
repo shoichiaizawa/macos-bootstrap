@@ -134,6 +134,7 @@ homebrew_packages:
   # - { name: tig }
   - { name: tmux }
   - { name: toilet }          # Similar to figlet
+  - { name: tor }
   - { name: tree }
   - { name: unzip } # Tap homebrew/dupes to install
   - { name: vim, install_options: override-system-vi }   # Specify some options if needed i.e. what --override-system-vi, --with-lua exactly do?
