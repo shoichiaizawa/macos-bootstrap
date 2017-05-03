@@ -75,6 +75,7 @@ homebrew_packages:
   - { name: gcc }
   # - { name: gettext }
   # - { name: gifsicle }
+  - { name: gist }
   - { name: git }
   - { name: git-cal }
     # - { name: git-lfs }         # TODO: How is this helpful?
