@@ -39,6 +39,7 @@ homebrew_cask_packages:
   - flux
   # - geektool
   # - gitbook
+  - gitee
   - github-desktop
   # - githubpulse
   - gitter
