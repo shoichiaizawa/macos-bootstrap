@@ -15,7 +15,6 @@ homebrew_taps:
   - homebrew/php
   - homebrew/services
   - homebrew/science
-  - homebrew/versions
   - vitorgalvao/tiny-scripts
   # - homebrew/python           # Tap as needed (or not)
 
