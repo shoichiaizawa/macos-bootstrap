@@ -16,7 +16,6 @@ homebrew_taps:
   - homebrew/services
   - homebrew/science
   - vitorgalvao/tiny-scripts
-  # - homebrew/python           # Tap as needed (or not)
 
 # Manage homebrew packages.
 #
