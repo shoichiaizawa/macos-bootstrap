@@ -12,7 +12,6 @@ homebrew_taps:
   - homebrew/apache
   - homebrew/binary
   - homebrew/core
-  - homebrew/dupes
   - homebrew/php
   - homebrew/services
   - homebrew/science
@@ -86,7 +85,7 @@ homebrew_packages:
   - { name: hub }
   - { name: imagemagick }
   # - { name: jq }
-  - { name: less }            # Tap homebrew/dupes to install
+  - { name: less }
   - { name: lua }
   # - { name: macvim, install_options: with-override-system-vim }
   - { name: mariadb }       # Drop-in replacement for MySQL
@@ -98,7 +97,7 @@ homebrew_packages:
   - { name: mutt }
   - { name: mycli }
   # - { name: mysql }
-  - { name: nano }            # Tap homebrew/dupes to install
+  - { name: nano }
   - { name: newsbeuter }
   - { name: nginx }
   # - { name: node }            # Use nvm to install
@@ -137,7 +136,7 @@ homebrew_packages:
   - { name: tor }
   - { name: tree }
   - { name: unrar }
-  - { name: unzip } # Tap homebrew/dupes to install
+  - { name: unzip }
   - { name: vim, install_options: override-system-vi }   # Specify some options if needed i.e. what --override-system-vi, --with-lua exactly do?
   - { name: watch }
   - { name: wget }            # TODO: Understand why some people install this
