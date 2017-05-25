@@ -171,10 +171,9 @@ homebrew_packages:
   # - { name: gnupg2 }          # gpg2
   # - { name: gnuplot,
   #     install_options: with-x11 } # Version 5; it has some bug when outputting graph
-  # - { name: gnuplot4,
-  #     install_options: with-x11 } # Tap homebrew/versions to install;
-                                    # NOTE:
-                                    # This is needed if saving an Octave plot
+  # - { name: gnuplot@4,
+  #     install_options: with-x11 } # NOTE:
+                                    # This was needed if saving an Octave plot
                                     # as a user-specified external image file.
                                     # The latest version 5.0.2 (Jan 2016)
                                     # has some bugs and does not output
