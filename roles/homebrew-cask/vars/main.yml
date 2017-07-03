@@ -81,6 +81,7 @@ homebrew_cask_packages:
   # - moom                  # See licence migration (MAS -> Direct): https://manytricks.com/blog/?page_id=2208
   # - mou
   # - noizio
+  - now
   - obs
   # - openemu
   # - packer
