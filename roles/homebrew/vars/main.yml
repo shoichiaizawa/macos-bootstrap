@@ -87,6 +87,7 @@ homebrew_packages:
   - { name: less }
   - { name: lua }
   # - { name: macvim, install_options: with-override-system-vim }
+  - { name: magic-wormhole }
   - { name: mariadb }       # Drop-in replacement for MySQL
   - { name: markdown }
   - { name: mas }             # Mac App Store command line interface
