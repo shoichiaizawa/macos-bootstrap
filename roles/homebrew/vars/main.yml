@@ -52,6 +52,7 @@ homebrew_packages:
                               # `brew-cask` as a Homebrew external command, and
                               # `brew update` will keep it up-to-date.
   - { name: cask-repair }     # Tap vitorgalvao/tiny-scripts to install
+  - { name: ccat }
   - { name: cmake }
   - { name: colordiff }
   - { name: composer }        # Tap homebrew/php to install
