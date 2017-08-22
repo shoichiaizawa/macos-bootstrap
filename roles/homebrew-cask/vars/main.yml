@@ -92,6 +92,7 @@ homebrew_cask_packages:
   # - recordit
   # - revisions
   # - robomongo             # Some describe this is the MongoDB equivalent of Sequel Pro
+  - rocket
   # - send-to-kindle
   - sequel-pro            # GUI tool for MySQL
   # - shuttle
