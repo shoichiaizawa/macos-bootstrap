@@ -59,7 +59,7 @@ homebrew_cask_packages:
   - jadengeller-helium
   - java                  # Install Java; tap caskroom/versions if multiple versions needed
   # - jewelrybox
-  - karabiner
+  - karabiner-elements
   - keycastr              # brew-cask not working; installed via GitHub repo
   - kindle
   - kitematic             # Docker GUI
