@@ -9,7 +9,6 @@ homebrew_taps:
   - caskroom/cask
   - caskroom/fonts
   - caskroom/versions
-  - homebrew/apache
   - homebrew/binary
   - homebrew/core
   - homebrew/php
