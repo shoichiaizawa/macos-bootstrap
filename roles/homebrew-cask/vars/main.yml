@@ -36,6 +36,7 @@ homebrew_cask_packages:
   # - fantastical           # What to do for licence paid
   # - filezilla
   - firefox
+  # - flume
   - flux
   # - geektool
   # - gitbook
