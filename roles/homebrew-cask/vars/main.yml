@@ -28,6 +28,25 @@ homebrew_cask_packages:
   # - colloquy              # Make sure it is usable i.e. do the settings
   - dash
   # - dayone-cli
+  - docker                  # Install:
+                            # - `docker-completion`
+                            # - `docker-completion`
+                            # - `docker-completion`
+                            # brew formulae alongside this Docker for Mac cask
+                            # formula
+                            #
+                            # OR
+                            #
+                            # Install:
+                            # - `docker`
+                            # - `docker-machine`
+                            # - `docker-compose`
+                            # brew formulae alongside VirtualBox
+                            #
+                            # NOTE: The Bash completion brew formulae listed
+                            #       the section above do not need to be
+                            #       installed as `docker`, `docker-machine` and
+                            #       `docker-compose` brew formulae include them
   - dropbox
   # - droplr
   # - dropzone
