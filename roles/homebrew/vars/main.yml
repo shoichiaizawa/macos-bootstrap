@@ -56,6 +56,7 @@ homebrew_packages:
   - { name: composer }        # Tap homebrew/php to install
   - { name: cowsay }
   - { name: ctags }           # I don't know what this is exactly
+  - { name: ctop }
   # - { name: curl }            # TODO: Better if you install this over the default one?
   # - { name: dark-mode }
   # - { name: dnsmasq }
