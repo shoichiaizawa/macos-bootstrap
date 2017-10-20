@@ -155,6 +155,9 @@ homebrew_packages:
   - { name: bash-completion@2 }
   - { name: brew-cask-completion }
   - { name: bundler-completion }
+  - { name: docker-completion }
+  - { name: docker-machine-completion }
+  - { name: docker-compose-completion }
   - { name: gem-completion }
   - { name: grunt-completion }
   - { name: pip-completion }
