@@ -13,6 +13,7 @@ homebrew_taps:
   - homebrew/php
   - homebrew/services
   - homebrew/science
+  - moncho/dry
   - vitorgalvao/tiny-scripts
 
 # Manage homebrew packages.
@@ -63,6 +64,7 @@ homebrew_packages:
   # - { name: docker }          # Commented out in favour of Docker for Mac installation
   # - { name: docker-compose }  # Commented out in favour of Docker for Mac installation
   # - { name: docker-machine }  # Commented out in favour of Docker for Mac installation
+  - { name: dry }             # Tap `moncho/dry` to install
   - { name: emacs, install_options: with-cocoa,srgb }
   # - { name: fasd }            # Like a successor of autojump and z
   - { name: ffmpeg }
