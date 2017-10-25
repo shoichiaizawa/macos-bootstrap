@@ -60,7 +60,7 @@ homebrew_cask_packages:
   # - geektool
   # - gitbook
   - gitee
-  - github-desktop
+  - github
   # - githubpulse
   - gitter
   - gitup
