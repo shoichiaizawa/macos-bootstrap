@@ -139,7 +139,7 @@ homebrew_packages:
   - { name: tree }
   - { name: unrar }
   - { name: unzip }
-  - { name: vim, install_options: override-system-vi }   # Specify some options if needed i.e. what --override-system-vi, --with-lua exactly do?
+  - { name: vim, install_options: override-system-vi, with-python3 }
   - { name: watch }
   - { name: wget }            # TODO: Understand why some people install this
   - { name: wifi-password }
