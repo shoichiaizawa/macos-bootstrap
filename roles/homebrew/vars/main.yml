@@ -100,7 +100,7 @@ homebrew_packages:
   - { name: mycli }
   # - { name: mysql }
   - { name: nano }
-  - { name: newsbeuter }
+  - { name: newsboat }
   - { name: nginx }
   # - { name: node }            # Use nvm to install
   # - { name: nvm }             # Not officially supported; see how to install at https://github.com/creationix/nvm

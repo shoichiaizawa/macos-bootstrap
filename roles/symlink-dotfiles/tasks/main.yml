@@ -22,8 +22,8 @@
     - { dir: '', name: 'mutt' }
     - { dir: 'mutt/', name: 'muttrc' }
 
-    # Newsbeuter
-    - { dir: '', name: 'newsbeuter' }
+    # Newsboat
+    - { dir: '', name: 'newsboat' }
 
     # Atom
     - { dir: '', name: 'atom' }
