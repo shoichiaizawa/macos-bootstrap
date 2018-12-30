@@ -136,6 +136,7 @@ homebrew_cask_packages:
   - vanilla
   # - vectr
   - virtualbox
+  - vivaldi
   - vlc
   # - vuze
   # - wi2-connect         # Removed from the cask list
