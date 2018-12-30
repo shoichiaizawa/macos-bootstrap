@@ -11,5 +11,5 @@
   roles:
     # - homebrew
     # - homebrew-cask
-    # - osx
+    # - masos
     - symlink-dotfiles
