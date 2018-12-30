@@ -97,6 +97,7 @@ homebrew_cask_packages:
   # - mailbox
   - mamp
   # - marked                # What to do for licence paid
+  - marp
   # - microsoft-office      # Install or not
   # - mindnode-pro          # What to do for licence paid
   - mojibar
