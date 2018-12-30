@@ -133,6 +133,7 @@ homebrew_cask_packages:
   - there
   - vagrant
   # - vagrant-manager
+  - vanilla
   # - vectr
   - virtualbox
   - vlc
