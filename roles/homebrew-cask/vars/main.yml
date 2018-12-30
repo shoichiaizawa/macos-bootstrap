@@ -130,6 +130,7 @@ homebrew_cask_packages:
   - sublime-text          # Now version 3 can be installed
   # - sublime-text-dev      # 3 is now a standard cask; tap caskroom/versions to install
   - the-unarchiver
+  - there
   - vagrant
   # - vagrant-manager
   # - vectr
