@@ -15,6 +15,10 @@
     - { dir: 'git/', name: 'gitconfig' }
     - { dir: 'git/', name: 'gitignore_global' }
 
+    # tmux
+    - { dir: '', name: 'tmux' }
+    - { dir: 'tmux/', name: 'tmux.conf' }
+
     # Emacs
     - { dir: '', name: 'emacs.d' }
 
@@ -29,8 +33,11 @@
     - { dir: '', name: 'atom' }
 
     # Misc
+    - { dir: '', name: 'czrc' }
     - { dir: '', name: 'inputrc' }
     - { dir: '', name: 'octaverc' }
     - { dir: '', name: 'pythonrc.py' }
+    - { dir: '', name: 'tldrrc' }
+    - { dir: '', name: 'vrapperrc' }
   tags:
     - dotfiles
