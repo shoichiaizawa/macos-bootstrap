@@ -154,9 +154,6 @@ homebrew_cask_packages:
   - qlstephen
   - qlmarkdown
   - quicklook-json
-  - qlprettypatch
-  - quicklook-csv
-  - betterzipql
   - qlimagesize
   - webpquicklook
   - suspicious-package
