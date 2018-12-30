@@ -1,16 +1,16 @@
 Mac OS X Bootstrapping via Ansible
 ==================================
 
-My Ansible playbook to automate provisioning Mac OS X.
+My Ansible playbook to automate provisioning macOS.
 
-About this repository
----------------------
+About this project
+------------------
 
-TBA
+- This project helps the initial setup for your macOS using Ansible.
 
 ###### NOTE:
 
-This repository is incomplete. In particular, the `bootstrap.sh` file is not carefully written, hence, **unusable**.
+This project is incomplete in many ways, particularly the `bootstrap.sh` file is not carefully written; hence, it should be used with extra caution. However, please feel free to view my Ansible Playbook settings for my Homebrew and Homebrew Cask.
 
 Usage
 -----
@@ -20,7 +20,7 @@ TBA
 Acknowledgements
 ----------------
 
-Upon writing playbooks in this repository, I was hugely inspired by the following web pages:
+Upon authoring the playbooks in this project, I was hugely inspired by the following web pages:
 
 - [homebrew - Package manager for Homebrew](http://docs.ansible.com/homebrew_module.html)
 - [homebrew_cask - Install/uninstall homebrew casks](http://docs.ansible.com/homebrew_cask_module.html)
@@ -30,6 +30,6 @@ Upon writing playbooks in this repository, I was hugely inspired by the followin
 License
 -------
 
-Copyright (c) 2016 Shoichi AIZAWA
+Copyright (c) 2018 Shoichi AIZAWA
 
 Licensed under the MIT license.
