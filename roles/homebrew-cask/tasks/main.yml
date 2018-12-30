@@ -6,7 +6,7 @@
     name: "{{ item }}"
     state: present
   with_items: "{{ homebrew_cask_packages }}"
-  when: "{{ homebrew_cask_packages }}"
+  when: homebrew_cask_packages
 
 - name: Cleanup Homebrew Cask packages
   command: brew cask cleanup
