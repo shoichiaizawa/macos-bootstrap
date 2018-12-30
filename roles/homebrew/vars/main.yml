@@ -7,15 +7,31 @@
 # - homebrew/binary
 homebrew_taps:
   - caskroom/cask
+  # - caskroom/drivers
+  # - caskroom/eid
   - caskroom/fonts
   - caskroom/versions
+  # - heroku/brew
   - homebrew/core
-  - homebrew/php
+  - homebrew/livecheck
   - homebrew/services
-  - homebrew/science
+  - jesseduffield/lazygit
   - moncho/dry
+  # - { tap: mkchoi212/fac, url: 'https://github.com/mkchoi212/fac.git' }
   - vitorgalvao/tiny-scripts
 
+  # - heroku/brew
+  # - homebrew/cask
+  # - homebrew/cask-drivers
+  # - homebrew/cask-eid
+  # - homebrew/cask-fonts
+  # - homebrew/cask-versions
+  # - homebrew/core
+  # - homebrew/livecheck
+  # - homebrew/services
+  # - mkchoi212/fac
+  # - moncho/dry
+  # - vitorgalvao/tiny-scripts
 # Manage homebrew packages.
 #
 # e.g.
@@ -42,6 +58,7 @@ homebrew_packages:
                               # Do the following things:
                               # 1. Add `/usr/local/bin/bash` to `/etc/shells`
                               # 2. Do `chsh -s /usr/local/bin/bash`
+  - { name: bat }
   # - { name: boot2docker }
   # - { name: brew-cask }       # Tap caskroom/cask to install:
                               # NOTE:
@@ -50,27 +67,32 @@ homebrew_packages:
                               # `brew tap caskroom/cask` will install
                               # `brew-cask` as a Homebrew external command, and
                               # `brew update` will keep it up-to-date.
+  - { name: cabextract }
   - { name: cask-repair }     # Tap vitorgalvao/tiny-scripts to install
   - { name: ccat }
   - { name: cmake }
   - { name: colordiff }
-  - { name: composer }        # Tap homebrew/php to install
+  - { name: composer }
   - { name: cowsay }
   - { name: ctags }           # I don't know what this is exactly
   - { name: ctop }
   # - { name: curl }            # TODO: Better if you install this over the default one?
   # - { name: dark-mode }
+  # - { name: dep }             # Compare with `glide`
+  - { name: diff-so-fancy }
   # - { name: dnsmasq }
   # - { name: docker }          # Commented out in favour of Docker for Mac installation
   # - { name: docker-compose }  # Commented out in favour of Docker for Mac installation
   # - { name: docker-machine }  # Commented out in favour of Docker for Mac installation
   - { name: dry }             # Tap `moncho/dry` to install
-  - { name: emacs, install_options: with-cocoa,srgb }
+  - { name: emacs, install_options: with-cocoa }
+  - { name: fac }             # Tap `mkchoi212/fac https://github.com/mkchoi212/fac.git` to install
   # - { name: fasd }            # Like a successor of autojump and z
   - { name: ffmpeg }
   - { name: fish }
   - { name: figlet }          # Similar to toilet
   - { name: fortune }
+  - { name: fzf }
   - { name: gcc }
   # - { name: gettext }
   # - { name: gifsicle }
@@ -79,14 +101,20 @@ homebrew_packages:
   - { name: git-cal }
   - { name: git-flow }
     # - { name: git-lfs }         # TODO: How is this helpful?
+  - { name: git-sizer }
+  - { name: glances }
+    # - { name: glide }           # Compare with `dep`
   - { name: go }
+  - { name: grv }
   - { name: heroku-toolbelt }
   - { name: htop }
   - { name: httpd }
   - { name: httpie }
   - { name: hub }
   - { name: imagemagick }
-  # - { name: jq }
+  - { name: jdupes }
+  - { name: jq }
+  - { name: lazygit }
   - { name: less }
   - { name: lua }
   # - { name: macvim, install_options: with-override-system-vim }
@@ -101,27 +129,32 @@ homebrew_packages:
   - { name: mycli }
   # - { name: mysql }
   - { name: nano }
+  - { name: neofetch }
   - { name: newsboat }
   - { name: nginx }
   # - { name: node }            # Use nvm to install
   # - { name: nvm }             # Not officially supported; see how to install at https://github.com/creationix/nvm
-  # - { name: octave }          # Tap homebrew/science to install, specify options if needed
+  # - { name: octave }
   # - { name: openssl }         # Specify some options if needed
   # - { name: packer }
-  # - { name: php56, install_options: --with-apache } # Tap homebrew/php to install
-  # - { name: php70, install_options: --with-apache } # Tap homebrew/php to install
+  - { name: peco }
+  # - { name: php@5.6 }
+  # - { name: php@7.0 }
+  # - { name: php@7.1 }
+  - { name: pipenv }
   - { name: pstree }
   - { name: pv }
   - { name: pyenv }
   - { name: pyenv-virtualenv }
-  # - { name: python }          # Use pyenv to install
-  # - { name: python3 }         # Use pyenv to install
+  - { name: python }            # Python 3
+  - { name: python@2 }          # Python 2
   - { name: rbenv }
   - { name: rbenv-default-gems }
   # - { name: rbenv-gem-rehash } # DEPRECATED
   - { name: readline }
   - { name: reattach-to-user-namespace }
   # - { name: redis }
+  - { name: rmlint }
   # - { name: rsync }
   - { name: ruby-build }
   # - { name: s3cmd }
@@ -129,7 +162,9 @@ homebrew_packages:
   - { name: source-highlight }
   - { name: speedtest_cli }   # NOTE: pip installation is seemingly default
   - { name: sqlite }
+  - { name: stern }
     # - { name: stormssh }      # TODO: See how this can be helpful
+  - { name: terraform }
   # - { name: the_platinum_searcher }
   - { name: the_silver_searcher }
   - { name: tidy-html5 }
@@ -140,11 +175,12 @@ homebrew_packages:
   - { name: tree }
   - { name: unrar }
   - { name: unzip }
-  - { name: vim, install_options: override-system-vi, with-python3 }
+  - { name: vim, install_options: with-override-system-vi }
   - { name: watch }
   - { name: wget }            # TODO: Understand why some people install this
   - { name: wifi-password }
-  - { name: wp-cli }          # Tap homebrew/php to install
+  - { name: wp-cli }
+  - { name: yarn, install_options: without-node } # Requires nvm or equivalent
   - { name: youtube-dl }
   - { name: z }               # Like a successor of autojump, predecessor of fasd
   - { name: zsh }
@@ -156,19 +192,22 @@ homebrew_packages:
 
   - { name: apm-bash-completion }
   - { name: bash-completion@2 }
-  - { name: brew-cask-completion }
+  # - { name: brew-cask-completion } # No longer needed
   - { name: bundler-completion }
   - { name: docker-completion }
   - { name: docker-machine-completion }
   - { name: docker-compose-completion }
   - { name: gem-completion }
   - { name: grunt-completion }
+  - { name: launchctl-completion }
+  - { name: open-completion }
   - { name: pip-completion }
   - { name: rails-completion }
   - { name: rake-completion }
   - { name: ruby-completion }
   - { name: tmuxinator-completion }
   - { name: vagrant-completion }
+  - { name: wpcli-completion }
 
   ##############################################################################
   # GNU command line tools
@@ -195,7 +234,7 @@ homebrew_packages:
   # Utility tools
   ##############################################################################
 
-  # - { name: coreutils }
+  - { name: coreutils }
   # - { name: moreutils }
   # - { name: binutils }
   # - { name: diffutils }

@@ -8,10 +8,11 @@
 
 - name: Tap external Homebrew repositories
   homebrew_tap:
-    tap: "{{ item }}"
+    tap: "{{ item.tap }}"
     state: present
+    url: "{{ item.url | default() }}"
   with_items: "{{ homebrew_taps }}"
-  when: "{{ homebrew_taps }}"
+  when: homebrew_taps
 
 - name: Install Homebrew packages
   homebrew:
@@ -19,7 +20,7 @@
     state: "{{ item.state | default('latest') }}"
     install_options: "{{ item.install_options | default() }}"
   with_items: "{{ homebrew_packages }}"
-  when: "{{ homebrew_packages }}"
+  when: homebrew_packages
 
 - name: Cleanup Homebrew packages
   command: brew cleanup
